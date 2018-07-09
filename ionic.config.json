@@ -1,0 +1,8 @@
+{
+  "name": "p5_Summers",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
