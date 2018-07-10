@@ -1,0 +1,61 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Register</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form #f="ngForm" (ngSubmit)="onRegister(f)">
+    <ion-list>
+    <ion-item>
+        <ion-label fixed>Name</ion-label>
+        <ion-input
+          type="text"
+          ngModel
+          name="name"
+          required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>Email</ion-label>
+        <ion-input
+          type="email"
+          ngModel
+          name="email"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+          required
+          ></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label>Phone Number</ion-label>
+          <ion-input
+            type="tel"
+            ngModel
+            name="phoneNumber"
+            [minlength]="10"
+            [maxlength]="10"
+            required></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label fixed>Username</ion-label>
+            <ion-input
+              type="text"
+              ngModel
+              name="Username"
+              required></ion-input>
+          </ion-item>
+      <ion-item>
+        <ion-label fixed>Password</ion-label>
+        <ion-input
+          type="password"
+          ngModel
+          name="password"
+          required
+          ></ion-input>
+      </ion-item>
+    </ion-list>
+    <button ion-button block type="submit"[disabled]="!f.valid">Register</button>
+  </form>
+</ion-content>
